@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # أمر تشغيل البوت
-CMD ["python", "bot.py"]
+CMD ["sh", "-c", "python -m http.server 10000 & python bot.py"]
