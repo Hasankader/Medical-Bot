@@ -10,9 +10,12 @@ from pptx import Presentation
 from PIL import Image
 import io
 import pytesseract
+import os
+# (باقي المكتبات مالتك تبقى مثل ما هي: telebot, json, re, إلخ...)
 
-TOKEN = '8645420286:AAHOuPIleQ1LDgCbYpGJTZzd3KSADMxvg0M'
-ADMIN_ID = 542533544  # الـ ID مالتك ثابت هنا
+# هنا السيرفر راح يسحب التوكن بشكل سري بدون ما ينفضح بالكود
+TOKEN = os.environ.get('BOT_TOKEN')
+ADMIN_ID = 542533544  # الـ ID مالتك عادي يبقى هنا لأن ما يشكل خطر
 
 bot = telebot.TeleBot(TOKEN)
 
